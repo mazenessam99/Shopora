@@ -9,8 +9,8 @@ import { ModeToggle } from '../ui/mode-toggle'
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   return (
-    <nav className=' border-b-2 shadow-sm sticky top-0 z-50'>
-      <div className='container flex justify-between items-center p-4'>
+    <nav className='h-16  shadow-lg sticky top-0 z-50 bg-background'>
+      <div className='container flex justify-between items-center h-full px-4'>
         <NavLink to="/" className="flex gap-3 items-center text-2xl font-bold text-primary">
           <ShoppingBag size={24} />
           Shopora
