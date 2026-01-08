@@ -1,5 +1,7 @@
 import React from 'react'
 import { CONTACT } from '@/constants'
+import { ArrowDown, Dock, Expand, ExpandIcon, File, Mail, MoveDown, SendHorizonal, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 const Contact = () => {
   return (
     <main className='container grow w-full flex flex-col py-8 lg:py-12 px-4 md:px-8 lg:px-40'>
@@ -37,6 +39,51 @@ const Contact = () => {
             </div>
 
           </div>
+
+
+        </div>
+        <div className='lg:col-span-7'>
+          <div className='bg-surface-dark rounded-2xl border border-border-dark p-6 md:p-8 lg:p-10 shadow-xl shadow-black/20'>
+            <h2 className='text-main font-bold text-2xl mb-6'>Send us a Message</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <label className='flex flex-col gap-2'>
+                <span className='font-medium text-sm'>Full Name</span>
+                <div className='relative'>
+                  <input className='w-full bg-background-dark border border-border-dark rounded-xl h-12 px-4 pl-11 text-white placeholder-[#586472] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"' placeholder="John Doe" type="text" />
+                  <User className='absolute left-3.5 top-1/2 -translate-y-1/2' size={20} />
+                </div>
+              </label>
+              <label className='flex flex-col gap-2'>
+                <span className='font-medium text-sm'>Email Address</span>
+                <div className='relative'>
+                  <input className='w-full bg-background-dark border border-border-dark rounded-xl h-12 px-4 pl-11 text-white placeholder-[#586472] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"' placeholder="john@example.com" type="email" />
+                  <Mail className='absolute left-3.5 top-1/2 -translate-y-1/2' size={20} />
+                </div>
+              </label>
+            </div>
+            <label className='flex flex-col gap-2 mt-3'>
+              <span className='font-medium text-sm'>Subject</span>
+              <div className='relative'>
+                <select name="" id="" className='w-full h-12 px-4 pl-11  text-main rounded-xl border border-border-dark outline-none appearance-none transition-all cursor-pointer '>
+                  <option disabled="" selected="" value="">Select a topic</option>
+                  <option value="order" className='bg-accent cursor-pointer'>Order Inquiry</option>
+                  <option value="product" className='bg-accent cursor-pointer'>Product Information</option>
+                  <option value="returns" className='bg-accent cursor-pointer'>Returns &amp; Refunds</option>
+                  <option value="other" className='bg-accent cursor-pointer'>Other</option>
+                </select>
+                <Dock className='absolute left-3.5 top-1/2 -translate-y-1/2 text-[#586472]' size={20}/>
+                <ArrowDown className='absolute right-3.5 top-1/2 -translate-y-1/2 text-[#586472] pointer-events-none' size={20}/>
+
+              </div>
+
+            </label>
+            <label className='flex flex-col gap-2 mt-3'>
+              <span className='font-meduim text-sm'>Message</span>
+              <textarea className='w-full bg-background-dark border border-border-dark rounded-xl p-4 text-main placeholder-[#586472] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none min-h-40' placeholder="How can we help you?"/>
+            </label>
+            <Button className="w-full mt-3 py-5 flex items-center gap-2 rounded-full hover:bg-blue-600 transition-colors font-bold h-12 shadow-lg shadow-primary/20 cursor-pointer">Send Message <SendHorizonal className='group-hover:translate-x-1 transition-transform'/></Button>
+          </div>
+
 
 
         </div>
